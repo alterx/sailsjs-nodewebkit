@@ -52,9 +52,9 @@
       check out splash.html
     */
     exports.onLoad = function() {
-        var gui = window.require('nw.gui');
+        var nwGUI = window.require('nw.gui');
 
-        gui.Window.get(window).on('loaded', function() {
+        nwGUI.Window.get(window).on('loaded', function() {
             if (loaded) {
                 return;
             }

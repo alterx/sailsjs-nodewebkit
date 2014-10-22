@@ -1,3 +1,3 @@
 # sailsjs-nodewebkit
 
-a [Sails](http://sailsjs.org) application
+This is a quick example to show you how to use SailsJS and node-webkit together.

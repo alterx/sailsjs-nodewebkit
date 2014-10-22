@@ -2,7 +2,7 @@
   "name": "sailsjs-nodewebkit",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "A node-webkit & sailsjs demo app",
   "keywords": [],
   "dependencies": {
     "sails": "^0.10.5",
@@ -32,7 +32,7 @@
   "node-main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/sailsjs-nodewebkit.git"
+    "url": "git://github.com/alterx/sailsjs-nodewebkit.git"
   },
   "window": {
     "title": "node-webkit & sailsjs demo",
@@ -49,6 +49,6 @@
   "webkit": {
     "plugin": true
   },
-  "author": "anonymous node/sails user",
-  "license": ""
+  "author": "Carlos Vega (gh:alterx, tw:@__el_Negro)",
+  "license": "MIT"
 }

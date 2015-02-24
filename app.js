@@ -19,39 +19,16 @@
  */
 // Ensure a "sails" can be located:
 (function() {
-
-    var Readable = require("stream").Readable,
-        util = require("util"),
-        sails,
-        loaded = false,
-        rc;
-
-    /*
-        If you're going to use other nodejs modules (most likely yes),
-        you're going to need this custom implementation of stdin
-        since node-wenkit doesn't implement it
-
-        Thanks, http://www.rodrigopandini.com/blog/getting-started-with-johnny-five-and-node-webkit/
-    */
-    util.inherits(MyStream, Readable);
-
-    function MyStream(opt) {
-        Readable.call(this, opt);
-    }
-
-    MyStream.prototype._read = function() {};
-
-    process.__defineGetter__("stdin", function() {
-        if (process.__stdin) return process.__stdin;
-        process.__stdin = new MyStream();
-        return process.__stdin;
-    });
-
+    
     /*
       This function is exported and accessible in the front end
       check out splash.html
     */
     exports.onLoad = function() {
+        var sails,
+            loaded = false,
+            rc;
+            r
         var nwGUI = window.require('nw.gui');
 
         nwGUI.Window.get(window).on('loaded', function() {
@@ -65,6 +42,7 @@
 
         try {
             sails = require('sails');
+            console.log('sails');
         } catch (e) {
             console.error('To run an app using `node app.js`, you usually need to have a version of `sails` installed in the same directory as your app.');
             console.error('To do that, run `npm install sails`');

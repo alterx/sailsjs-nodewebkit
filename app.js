@@ -19,7 +19,7 @@
  */
 // Ensure a "sails" can be located:
 (function() {
-    
+
     /*
       This function is exported and accessible in the front end
       check out splash.html
@@ -28,7 +28,7 @@
         var sails,
             loaded = false,
             rc;
-            r
+
         var nwGUI = window.require('nw.gui');
 
         nwGUI.Window.get(window).on('loaded', function() {
@@ -41,8 +41,7 @@
         });
 
         try {
-            sails = require('sails');
-            console.log('sails');
+            sails = window.require('sails');
         } catch (e) {
             console.error('To run an app using `node app.js`, you usually need to have a version of `sails` installed in the same directory as your app.');
             console.error('To do that, run `npm install sails`');
@@ -55,10 +54,10 @@
 
         // Try to get `rc` dependency
         try {
-            rc = require('rc');
+            rc = window.require('rc');
         } catch (e0) {
             try {
-                rc = require('sails/node_modules/rc');
+                rc = window.require('sails/node_modules/rc');
             } catch (e1) {
                 console.error('Could not find dependency: `rc`.');
                 console.error('Your `.sailsrc` file(s) will be ignored.');

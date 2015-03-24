@@ -57,7 +57,8 @@ module.exports.blueprints = {
   * For example, a BoatController with `rest` enabled generates the          *
   * following routes:                                                        *
   * :::::::::::::::::::::::::::::::::::::::::::::::::::::::                  *
-  *  GET /boat/:id? -> BoatController.find                                   *
+  *  GET /boat -> BoatController.find                                        *
+  *  GET /boat/:id -> BoatController.findOne                                 *
   *  POST /boat -> BoatController.create                                     *
   *  PUT /boat/:id -> BoatController.update                                  *
   *  DELETE /boat/:id -> BoatController.destroy                              *

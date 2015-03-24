@@ -28,7 +28,7 @@
     "start": "node app.js",
     "debug": "node debug app.js"
   },
-  "main": "splash.html",
+  "main": "index.html",
   "node-main": "app.js",
   "repository": {
     "type": "git",
